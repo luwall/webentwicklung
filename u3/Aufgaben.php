@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/d0a105d246.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Aufgaben</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="jumbotron mx-auto">
+
+        <h1 align="center">Aufgabenplaner: Aufgaben</h1>
+
+    </div>
+    <div class="row">
+        <?php include("sidebar.php")?>
+        <div class="col-8" id="content">
+            <table class="table">
+                <thead class="light">
+                <tr>
+                    <th scope="col">Aufgabenbezeichnung:</th>
+                    <th scope="col">Beschreibung der Aufgabe:</th>
+                    <th scope="col">Reiter:</th>
+                    <th scope="col">Zuständig:</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>HTML Datei erstellen</td>
+                    <td>HTML Datei erstellen</td>
+                    <td>ToDo</td>
+                    <td>Max Mustermann</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+                <tr>
+                    <td>CSS Dateien erstellen</td>
+                    <td>CSS Dateien erstellen</td>
+                    <td>ToDo</td>
+                    <td>Max Mustermann</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+                <tr>
+                    <td>PC eingeschaltet</td>
+                    <td>PC einschalten</td>
+                    <td>erledigt</td>
+                    <td>Max Mustermann</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+                <tr>
+                    <td>Kaffee trinken</td>
+                    <td>Kaffee trinken</td>
+                    <td>erledigt</td>
+                    <td>Petra Müller</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+                <tr>
+                    <td>Für die Uni lernen</td>
+                    <td>Für die Uni lernen</td>
+                    <td>verschoben</td>
+                    <td>Max Mustermann</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <div class="form-group">
+                <h3>Bearbeiten/erstellen</h3>
+                <label for="Aufgabenname">Aufgabenbezeichnung:</label>
+                <input type="text" class="form-control" id="Aufgabenname" placeholder="Aufgabe">
+                <br>
+                <label for="Beschreibung">Beschreibung der Aufgabe</label>
+                <textarea class="form-control" id="Beschreibung" placeholder="Beschreibung" rows="4"></textarea>
+                <br>
+                <label for="anfangdatum">Erstellung der Aufgabe</label>
+                <input type="date" class="form-control" id="anfangdatum">
+                <br>
+                <label for="fällig">fällig bis:</label>
+                <input type="date" class="form-control" id="fällig">
+            </div>
+            <div class="form-group">
+                <label for="reiter">Zugehörigher Reiter:</label>
+                <select id="reiter" class="form-control">
+                    <option selected>ToDo</option>
+                    <option>Erledigt</option>
+                    <option>Verschoben</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="zuständig">Zuständig:</label>
+                <select id="zuständig" class="form-control">
+                    <option selected>Max Mustermann</option>
+                    <option>Petra Müller</option>
+                </select>
+            </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary">Speichern</button>
+            <button type="button" class="btn btn-info">Reset</button>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
